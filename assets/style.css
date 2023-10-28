@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --main: black;
+    --accent: coral;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+ /*style navigation element*/ 
+  header {
+    background-color: var(--accent);
+    height: 100px;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  ul a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    padding-top: 35px;
+  }
+
+/*style hero banner*/
+
+h1 {
+    font-size: 60px;
+    color: var(--main);
+    text-align: center;
+}
+
+h1 + p {
+    color: var(--main);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 500px;
+    grid-template-areas: 
+    "professional image personal"
+    ; 
+    gap: 5%;
+}
+
+#professional {
+  grid-area: professional;
+  padding-top: 50px;
+  background-color: var(--accent);
+  text-align: center;
+}
+
+#image {
+  grid-area: image;
+  text-align: center;
+}
+
+#image img {
+  max-width: auto;
+  max-height: 100%;
+}
+
+#personal {
+  grid-area: personal;
+  padding-top: 50px;
+  background-color: var(--accent);
+  text-align: center;
+}
+
+/*style my work grid*/ 
+
+h2 {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.page-section {
+  display: grid;
+  margin-top: 100px;
+  min-height: 140vh;
+  grid-template-columns: 58% 38%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "example-one example-two"
+  "example-one example-three"
+  "example-one example-four";
+  gap: 4%;
+}
+
+.grid-item { 
+  display: grid;
+  max-height: 140vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  align-content: space-between;
+  justify-content: center;
+  border: solid var(--accent) 50px;
+}
+
+#example-one {
+  grid-area: example-one;
+  background-image: url("../assets/images/IMG_3612.JPG");
+}
+
+#example-two {
+  grid-area: example-two;
+  background-image: url("../assets/images/IMG_3934.JPG");
+}
+
+#example-three {
+  grid-area: example-three;
+  background-image: url("../assets/images/IMG_4244.JPG");
+}
+
+#example-four {
+  grid-area: example-four;
+  background-image: url("../assets/images/IMG_5294.JPG");
+}
+  
+
+
+
+
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
