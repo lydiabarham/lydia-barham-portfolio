@@ -185,6 +185,7 @@ h3 {
     background-color: var(--accent);
   }
 
+/*media querie for smaller screen compatibility*/
 
   @media only screen and (max-width:768px){
     .hero-grid {
@@ -217,4 +218,9 @@ h3 {
     #example-two #example-three #example-four {
       height: 150px;
     }
+
+    nav ul {
+      display: none;
+    }
+
 }
