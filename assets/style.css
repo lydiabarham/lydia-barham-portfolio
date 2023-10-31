@@ -4,7 +4,7 @@
 
   :root {
     --main: black;
-    --accent: coral;
+    --accent: #bab86c;
   }
 
   body {
@@ -59,7 +59,7 @@ h1 + p {
 .hero-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 500px;
+    grid-template-rows: auto;
     grid-template-areas: 
     "professional image personal"
     ; 
@@ -79,8 +79,8 @@ h1 + p {
 }
 
 #image img {
-  max-width: auto;
-  max-height: 100%;
+  max-width: 100%;
+  max-height: 700px;
 }
 
 #personal {
@@ -92,7 +92,8 @@ h1 + p {
 
 /*style my work grid*/ 
 
-#work h2 {
+#my-work h2 {
+  display: block;
   padding-top : 40px;
   padding-left: 40px;
 }
@@ -122,9 +123,23 @@ h1 + p {
   border: solid var(--accent) 50px;
 }
 
+h3 {
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+  padding: 0 20px 0 20px;
+  color: var(--accent);
+  font-size: 25px;
+}
+
+.page-section a {
+  text-decoration: none;
+}
+
 #example-one {
   grid-area: example-one;
-  background-image: url("../assets/images/IMG_3612.JPG");
+  background-image: url("../assets/images/Horiseon\ screenshot.png");
 }
 
 #example-two {
@@ -169,14 +184,37 @@ h1 + p {
     padding: 20px;
     background-color: var(--accent);
   }
-  
-  button { 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    background-color: beige;
-    border: solid 2px var(--main);
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: bold;
+
+
+  @media only screen and (max-width:768px){
+    .hero-grid {
+      grid-template-columns: 100%;
+      grid-template-rows: 300px auto 300px;
+      grid-template-areas: 
+      "personal"
+      "image"
+      "professional";
+    }
+
+    #my-work h2 {
+      padding-top: 150px;
+    }
+
+    .page-section {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+      "example-one"
+      "example-two"
+      "example-three"
+      "example-four";
   }
+
+    #example-one {
+      height: 300px;
+    }
+
+    #example-two #example-three #example-four {
+      height: 150px;
+    }
+}
